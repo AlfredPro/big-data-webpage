@@ -8,4 +8,12 @@ function loadListPerro(){
         img.setAttribute("src", obj.message);
     }
     request.send();
+    const fs = require('fs');
+
+    const data = 'This is the data that will be written to the file.';
+
+    fs.writeFile('example.txt', data, (err) => {
+    if (err) throw err;
+    console.log('Data has been written to the file successfully!');
+    });
 }
